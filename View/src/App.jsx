@@ -22,9 +22,10 @@ const App = () => {
     const promptObject = {
       joke: `[Act as a comedian] Tell a light-hearted joke that will make someone smile about ${text} and language should be ${language}.`,
       positiveThought: `[act as a positive thinker] Share an optimistic and uplifting thought about life or the day and plae use this topiq ${text} ahead and language should be ${language} give small.`,
-      summary: `[act as a summarizer] Summarize the following text: ${text} language should be ${language} result length should be reduce`,
+      summary: `[act as a summarizer] language must be translate in ${language} and  result length should be reduce Summarize the following text: ${text} `,
     };
-    const apiKey = "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";
+    const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
+    console.log(promptObject[topiq]);
     if (!promptObject[topiq]) {
       console.log(topiq);
       alert("please select Topiq you want");

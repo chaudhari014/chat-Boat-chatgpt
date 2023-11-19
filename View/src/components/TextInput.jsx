@@ -64,7 +64,7 @@ const TextInput = ({ onTextSubmit, resultlength }) => {
             text length:<span className="inputText">{inputText.length}</span>
           </p>
         )}
-        {resultlength > 0 && (
+        {text && resultlength > 0 && (
           <p>
             summary Text Length:
             <span className="resultText">{resultlength}</span>
